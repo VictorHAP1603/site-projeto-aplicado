@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+</head> 
 <body>
-    <header>
+    <header class="header-dt">
         <div class="container">
             <div class="logo">
                 <span>COWO</span>
@@ -21,12 +24,31 @@
                 <span>KING</span>
             </div>
 
-
             <nav>
                 <a href="#planos">PLANOS</a>
-                <a href="#">CONTATO</a>
+                <a href="#comodidades">COMODIDADES</a>
+                <a href="#galeria">GALERIA</a>
+                <a href="#contato">CONTATO</a>
             </nav>
+            
         </div>
+    </header>
+
+    <header class="header-mb">
+
+        <div class="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <a href="#planos">PLANOS</a>
+            <a href="#comodidades">COMODIDADES</a>
+            <a href="#galeria">GALERIA</a>
+            <a href="#contato">CONTATO</a>
+        </nav>
+
     </header>
 
     <main>
@@ -76,6 +98,72 @@
             </div>
         </section>
 
-    </main>
+        <section id="comodidades">
+            <div class="container">
+                <h1 class="underline__title">Comodidades</h1>
+
+                <div class="container-comodidades">
+                    <!-- dinamico pelo JS -->
+                </div>
+
+                <div class="template__card">
+                    <div class="comodidade__item">
+                        <i class=""></i>
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <div class="container">
+                <h1 class="underline__title">Galeria</h1>
+
+                <div class="container__galeria">
+                    <div class="img-principal">
+                        <img src="">
+                    </div>
+
+                    <div class="slide-imgs">
+
+                        <!-- <div class="slide__item">
+                            <img src="">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h1 class="underline__title">Contato</h1>
+
+                <div class="formulario">
+                    <form>
+
+                       <label>
+                           <input type="text" placeholder="Seu Nome">
+                       </label>
+
+                       <label>
+                           <input type="text" placeholder="Seu Email">
+                       </label>
+
+                       <label>
+                           <textarea placeholder="Escreva aqui"></textarea>
+                       </label>
+
+                       <button>Enviar</button>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main> 
+
+    <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>

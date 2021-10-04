@@ -1,0 +1,43 @@
+[
+    {
+        "title": "Internet de Alta Velocidade",
+        "description": "Internet de alta velocidade com redundância de provedores para maior segurança dos usuários",
+        "classFA": "fas fa-wifi fa-4x"
+    },
+    {
+        "title": "Locação de Notebooks",
+        "description": "Para não precisar transportar seu equipamento todos os dias",
+        "classFA": "fas fa-laptop fa-4x"
+    },
+    {
+        "title": "Networking",
+        "description": "Interação com pessoas e empresas com grande potencial de parceria",
+        "classFA": "fas fa-network-wired fa-4x"
+    },
+    {
+        "title": "Impressora Wifi",
+        "description": "Impressora wifi compartilhada",
+        "classFA": "fas fa-print fa-4x"
+    },
+    {
+        "title": "Seguro Contra Roubo e Furto",
+        "description": "Nosso seguro dará proteção contra roubo, furto e danos elétricos, mais segurança para nossos Coworkers",
+        "classFA": "fas fa-lock fa-4x"
+    }, 
+    {
+        "title": "Coffee",
+        "description": "Área compartilhada para pequenos lanches e um momento de descanso",
+        "classFA": "fas fa-coffee fa-4x"
+    },
+    {
+        "title": "Ambiente Sustentável",
+        "description": "Usamos energia solar através de nossas placas solares para prover energia à todos",
+        "classFA": "fas fa-sun fa-4x"
+    },
+    {
+        "title": "Burocracia Reduzida",
+        "description": "A contratação do plano de Coworking é ágil, sem análise de crédito ou contratos muito longos",
+        "classFA": "fas fa-file-signature fa-4x"
+    }
+
+]

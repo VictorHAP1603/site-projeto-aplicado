@@ -52,6 +52,12 @@ input, textarea, select {
 .container {
     margin: 0 auto;
 
+    h1 {
+        text-align: center;
+        display: inline-block;
+        font-size: 2rem;
+    }
+
     @media (min-width: 1024px) {
         max-width: 960px;
     }
@@ -64,6 +70,7 @@ input, textarea, select {
         max-width: 1244px;
     }
 }
+
 
 
 .underline__title {

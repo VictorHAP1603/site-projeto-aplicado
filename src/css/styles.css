@@ -11,6 +11,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 header .container .logo {
   color: var(--white);
@@ -51,6 +52,56 @@ header .container nav a.active::after, header .container nav a:hover::after {
 }
 header .container nav a + a {
   margin-left: 2rem;
+}
+header.header-mb {
+  display: none;
+}
+@media (max-width: 767px) {
+  header.header-dt {
+    display: none;
+  }
+  header.header-mb {
+    display: flex;
+    position: sticky;
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+  header.header-mb .hamburguer {
+    align-self: center;
+    justify-self: flex-end;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header.header-mb .hamburguer span {
+    height: 4px;
+    width: 100%;
+    background-color: var(--green-500);
+  }
+  header.header-mb nav {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 0.4s ease;
+  }
+  header.header-mb nav a {
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background-color: var(--green-500);
+    color: white;
+  }
+  header.header-mb nav a + a {
+    border-top: 1px solid black;
+  }
+  header.header-mb nav.active {
+    transform: translateX(0%);
+  }
 }
 
 #banner {
@@ -101,20 +152,24 @@ header .container nav a + a {
 #banner .banner__desc p + p {
   margin-top: 50px;
 }
+@media (max-width: 768px) {
+  #banner .banner__content h1 {
+    font-size: 3rem;
+  }
+  #banner .banner__desc p {
+    font-size: 1rem;
+  }
+}
 
 #planos {
-  height: 100vh;
-  padding: 50px 0;
+  height: auto;
+  padding: 50px 0 80px;
   background-color: var(--gray-300);
 }
 #planos .container {
   display: flex;
   flex-direction: column;
-}
-#planos h1 {
-  text-align: center;
-  display: inline-block;
-  font-size: 2rem;
+  padding: 0 10px;
 }
 #planos .planos__content {
   margin-top: 100px;
@@ -196,4 +251,185 @@ header .container nav a + a {
   cursor: pointer;
   transform: translateY(-5px);
   box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  #planos .planos__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+#comodidades {
+  padding: 50px 0 80px;
+  height: auto;
+}
+#comodidades .container {
+  display: flex;
+  flex-direction: column;
+}
+#comodidades .container-comodidades {
+  width: 100%;
+  margin-top: 100px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+#comodidades .container-comodidades > div {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#comodidades .container-comodidades > div i {
+  color: var(--green-500);
+}
+#comodidades .container-comodidades > div h2 {
+  margin: 15px 0 30px;
+}
+#comodidades .container-comodidades > div p {
+  color: var(--gray-600);
+}
+#comodidades .template__card {
+  display: none;
+}
+@media (max-width: 868px) {
+  #comodidades .container-comodidades {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  #comodidades .container-comodidades {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 488px) {
+  #comodidades .container-comodidades {
+    grid-template-columns: 1fr;
+  }
+  #comodidades .container-comodidades > div {
+    padding: 0 10px;
+  }
+}
+
+#galeria {
+  background-color: var(--gray-300);
+  height: 100vh;
+  padding: 50px 0 100px;
+}
+#galeria .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10px;
+}
+#galeria .container__galeria {
+  margin-top: 50px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 70% 20%;
+  gap: 10px;
+}
+#galeria .container__galeria .img-principal {
+  height: 100%;
+  overflow: hidden;
+}
+#galeria .container__galeria .img-principal img {
+  width: 100%;
+  height: 100%;
+}
+#galeria .container__galeria .slide-imgs {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 10px;
+}
+#galeria .container__galeria .slide-imgs .slide__item {
+  flex-shrink: 0;
+  width: 25%;
+  position: relative;
+  cursor: pointer;
+}
+#galeria .container__galeria .slide-imgs .slide__item img {
+  width: 100%;
+  height: 100%;
+}
+#galeria .container__galeria .slide-imgs .slide__item + .slide__item {
+  margin-left: 10px;
+}
+#galeria .container__galeria .slide-imgs .slide__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.4s;
+}
+#galeria .container__galeria .slide-imgs .slide__item:hover::after, #galeria .container__galeria .slide-imgs .slide__item.active::after {
+  background-color: transparent;
+}
+#galeria .container__galeria .slide-imgs::-webkit-scrollbar {
+  height: 8px;
+}
+#galeria .container__galeria .slide-imgs::-webkit-scrollbar-track {
+  background: black;
+}
+#galeria .container__galeria .slide-imgs::-webkit-scrollbar-thumb {
+  background-color: var(--green-500);
+  /* color of the scroll thumb */
+  border-radius: 10px;
+  /* roundness of the scroll thumb */
+}
+
+#contato {
+  height: 100vh;
+  padding: 50px 0 80px;
+}
+#contato .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10px;
+}
+#contato .formulario {
+  height: 100%;
+  margin-top: 80px;
+}
+#contato .formulario form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#contato .formulario label + label {
+  margin-top: 30px;
+}
+#contato .formulario label:nth-child(3) {
+  flex: 1;
+}
+#contato .formulario textarea {
+  height: 100%;
+}
+#contato .formulario input, #contato .formulario textarea {
+  padding: 15px 20px;
+}
+#contato .formulario input:focus, #contato .formulario textarea:focus {
+  outline: 1px solid var(--green-500);
+}
+#contato .formulario button {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--green-500);
+  border: 1px solid var(--green-500);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.4s;
+}
+#contato .formulario button:hover {
+  filter: brightness(0.8);
+}
+#contato .formulario input, #contato .formulario textarea, #contato .formulario button, #contato .formulario label {
+  display: block;
+  width: 100%;
 }
