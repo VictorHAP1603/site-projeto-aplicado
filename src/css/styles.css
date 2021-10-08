@@ -401,6 +401,13 @@ header.header-mb {
   display: flex;
   flex-direction: column;
 }
+#contato .formulario .form__input.warning {
+  border: 1px solid red !important;
+}
+#contato .formulario label .message__invalid {
+  color: red;
+  font-size: 0.8rem;
+}
 #contato .formulario label + label {
   margin-top: 30px;
 }
@@ -432,4 +439,11 @@ header.header-mb {
 #contato .formulario input, #contato .formulario textarea, #contato .formulario button, #contato .formulario label {
   display: block;
   width: 100%;
+}
+#contato .formulario .message__send {
+  color: var(--gray-500);
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  margin: 15px auto;
 }
