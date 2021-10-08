@@ -28,9 +28,11 @@ export default class ValidaForm {
 
         setTimeout(() => {
             const aviso = this.aviso('E-mail enviado com sucesso', 'message__send')
-            this.form.append(aviso);
+            // this.form.append(aviso);
+            // ou
+            this.form.insertBefore(aviso, this.buttonEnvia.nextElementSibling)
+            
             this.buttonEnvia.innerHTML = 'Enviar'
-
             this.inputs.forEach(i => i.value = '')
 
             setTimeout(() => {
@@ -76,7 +78,7 @@ export default class ValidaForm {
                     if (!parentElement.querySelector('.message__invalid')) {
                         parentElement.append(aviso);
                     }
-                    
+
                 } else {
                     if (parentElement.querySelector('.message__invalid')) {
                         parentElement.querySelector('.message__invalid').remove();
@@ -106,5 +108,6 @@ export default class ValidaForm {
     init() {
         this.bindEvents();
         this.form.addEventListener('submit', this.submitForm)
+
     }
 }
